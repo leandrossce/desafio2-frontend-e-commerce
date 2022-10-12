@@ -1,5 +1,5 @@
 const listaClientes = () =>  {
-    return fetch(`http://localhost:3000/profile`)
+    return fetch(`https://leandrossce.github.io/desafio2-frontend-e-commerce/profile`)
     .then(resposta => {
         if(resposta.ok){
             return resposta.json()
@@ -9,7 +9,7 @@ const listaClientes = () =>  {
 }
 
 const criaUsuario = (senha,email) => { 
-    return fetch(`http://localhost:3000/profile`, {
+    return fetch(`https://leandrossce.github.io/desafio2-frontend-e-commerce/profile`, {
         method: 'POST',         //enviar os dados (postar)
         headers: {                      // qual tipo de informação está enviando?
             'Content-Type' : 'application/json'     
@@ -28,7 +28,7 @@ const criaUsuario = (senha,email) => {
 }
 
 const removeCliente = (id) => { 
-    return fetch(`http://localhost:3000/profile/${id}`, {
+    return fetch(`https://leandrossce.github.io/desafio2-frontend-e-commerce/profile/${id}`, {
         method: 'DELETE'
     })
     .then( resposta => { 
@@ -39,7 +39,7 @@ const removeCliente = (id) => {
 }
  
 const detalhaUsuario = (id) => { 
-    return fetch(`http://localhost:3000/profile/${id}`)
+    return fetch(`https://leandrossce.github.io/desafio2-frontend-e-commerce/profile/${id}`)
     .then(resposta => { 
         if(resposta.ok){
             return resposta.json()
@@ -50,7 +50,7 @@ const detalhaUsuario = (id) => {
 }
 
 const atualizaUsuario = (id, senha, email) => {
-    return fetch(`http://localhost:3000/profile/${id}`, {
+    return fetch(`https://leandrossce.github.io/desafio2-frontend-e-commerce/profile/${id}`, {
         method: 'PUT',
         headers: { 
             'Content-type' : 'application/json'
